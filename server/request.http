@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "gim",
+    "password": "gim"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "thuyen",
+    "password": "123"
+}
+
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTFhNDFjYzZjOTk4Zjg5Yzc3OGFhYzQiLCJpYXQiOjE2OTc2NTA1NzN9.wdTalsER8el6Sc0Pi5k2Qrj9uORmaEw6Yr168fpK8EU
+
+{
+    "title":"dfdfdf 22",
+    "description":"testxem12323ntn ",
+    "url": "123.com",
+    "status": "TO LEARN"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTFhNDFjYzZjOTk4Zjg5Yzc3OGFhYzQiLCJpYXQiOjE2OTc2NTA1NzN9.wdTalsER8el6Sc0Pi5k2Qrj9uORmaEw6Yr168fpK8EU
+
+###
+PUT http://localhost:5000/api/posts/651c68736faa160dbfa8b82c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTFhZjdhNzU2NzgyMjEyYzIyOTg4M2IiLCJpYXQiOjE2OTYzNjExMTd9.8g4T_h-vzfO2w9V-CZ-rifkPofyTbPqpLqey0Dw-c1U
+
+{
+    "title":"update",
+    "description":"update ne",
+    "url":"facebook.com",
+    "status":"LEANRING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/651c68736faa160dbfa8b82c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTFhZjdhNzU2NzgyMjEyYzIyOTg4M2IiLCJpYXQiOjE2OTYzNjExMTd9.8g4T_h-vzfO2w9V-CZ-rifkPofyTbPqpLqey0Dw-c1U
